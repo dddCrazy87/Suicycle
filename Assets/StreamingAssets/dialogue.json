@@ -1,0 +1,174 @@
+{
+  "scenes": [
+    {
+      "sceneName": "Lv0_start",
+      "dialogues": [
+        {
+          "character": "Susu",
+          "text": "...呼…呼…zzz…",
+          "background": "test1",
+          "dubbing": "配音",
+          "other": ""
+        },
+        {
+          "character": "",
+          "text": "",
+          "background": "KickBottle1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "",
+          "text": "",
+          "background": "KickBottle2",
+          "dubbing": "音效",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "嗚，好痛…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "真是，到底是哪個白目的小孩，讓我的身體又變成這樣啊！",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        }
+      ]
+    },{
+      "sceneName": "Lv1_start",
+      "dialogues": [
+        {
+          "character": "",
+          "text": "",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        }
+      ]
+    },{
+      "sceneName": "Lv2_start",
+      "dialogues": [
+        {
+          "character": "Susu",
+          "text": "我的天，這裡又是什麼地方，我真的沒有走錯嗎…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "",
+          "text": "",
+          "background": "",
+          "dubbing": "慘叫聲",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "（吞口水）嗯…看來就是這裡沒錯呢，好像也沒有其他路了",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "快啊，往前啊！",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "怎麼會，雙腳不聽使喚…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "我…正在害怕？",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "我這個…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "我這個沒用的廢物！到底在害怕什麼？",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "不是早就下定決心了嗎？",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "已經失去作為一個寶特瓶的功能，現在就連往前一步都做不到嗎？",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "在這裡選擇停下腳步的話，也只會回到以前無助的那種生活而已啊！",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "難道還要繼續過著那種日子嗎？",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "不是這樣的吧…",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "不是這樣的，我早就不想要再忍受了！",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "我要證明，我有能力選擇我要的人生",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "也許我已經不被任何人需要了，但此時此刻，",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        },{
+          "character": "Susu",
+          "text": "我需要自己做出最自私的選擇！",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        }
+      ]
+    }
+  ]
+}
