@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - trigger_tag
+  - Crusher
+  - Obstacle
   layers:
   - Default
   - TransparentFX
