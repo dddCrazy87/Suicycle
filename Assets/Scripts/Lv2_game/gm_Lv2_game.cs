@@ -9,12 +9,14 @@ public class gm_Lv2_game : MonoBehaviour
     // 黑色遮罩的 Image 元件
     [SerializeField] Image fadeImage;
     [SerializeField] float fadeDuration = 1f;
+    // 生成物件
+    [SerializeField] ObjectSpawner objectSpawner;
+    [SerializeField] float startDelay = 1.5f;
+    [SerializeField] float repeatRate = 1f;
     
     void Start() {
-        if (DialogueManager.Instance != null && DialogueManager.Instance.gameData != null) {
-            
-        }
         StartCoroutine(FadeIn());
+        InvokeRepeating("SpawnObj", startDelay, repeatRate);
     }
 
     IEnumerator FadeIn()
@@ -38,5 +40,9 @@ public class gm_Lv2_game : MonoBehaviour
         Color color = fadeImage.color;
         color.a = Mathf.Clamp01(alpha);
         fadeImage.color = color;
+    }
+
+    void SpawnObj() {
+        objectSpawner.SpawnObjects();
     }
 }
