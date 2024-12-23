@@ -13,28 +13,168 @@
         {
           "character": "",
           "text": "",
-          "background": "KickBottle1",
+          "background": "KickPark1",
           "dubbing": "",
           "other": ""
         },
         {
           "character": "",
           "text": "",
-          "background": "KickBottle2",
+          "background": "KickPark2",
           "dubbing": "音效",
           "other": ""
         },
         {
           "character": "Susu",
           "text": "嗚，好痛…",
-          "background": "",
+          "background": "KickPark2",
           "dubbing": "",
           "other": ""
         },
         {
           "character": "Susu",
           "text": "真是，到底是哪個白目的小孩，讓我的身體又變成這樣啊！",
-          "background": "",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "如果是曾經的我，可能會像這樣大聲的咒罵吧…",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "事到如今，好像已經無所謂了…",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "畢竟我的身體早已經充滿傷痕，我早就不再期待我有能夠再次被使用的一天了…",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "但如果真要說有什麼期待的事，果然是那個吧…",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "嘿…沒見過你耶，你是新來的嗎?",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "哦，你對這個很好奇嗎?",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "老先生，你知道那個桶子是什麼用途嗎?",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "在我們這裡流傳著一個傳說",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "『但凡進入那個桶子的垃圾，最後都能安詳地死去』",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "什麼？會死去？我剛剛正眼睜睜的看見一個同類被扔進去",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "是嗎？那可真是幸運阿",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "幸運？他可是要死了哦？",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "呵呵，等到你待久了就會明白了…",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "Susu",
+          "text": "你說會明白？到底是明白什麼阿？",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "明白不被需要會有多麼的難受…明白無盡的等待是多麼的煎熬…明白這樣的痛苦將會持續多久…",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "OldTrash",
+          "text": "而到了你即將面臨死亡的那天，你會這麼說…",
+          "background": "Park",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "AngryMom",
+          "text": "喂！你怎麼可以把垃圾踢到這麼遠的地方啊！",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "KickBottleKid",
+          "text": "啊！我不是故意的嘛，對不起…",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "AngryMom",
+          "text": "跟我道歉有什麼用，趕快把它拿去丟！",
+          "background": "KickPark1",
+          "dubbing": "",
+          "other": ""
+        },
+        {
+          "character": "KickBottleKid",
+          "text": "好嘛，我現在就去",
+          "background": "KickPark1",
           "dubbing": "",
           "other": ""
         }
