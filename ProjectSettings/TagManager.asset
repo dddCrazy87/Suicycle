@@ -8,6 +8,7 @@ TagManager:
   - Crusher
   - Obstacle
   - Background
+  - EndGameLine
   layers:
   - Default
   - TransparentFX

@@ -31,16 +31,7 @@ public class DialogueManager : MonoBehaviour
         public List<SceneData> scenes;
     }
 
-    public Image backgroundImage;
-    public Text characterNameText;
-    public Text dialogueText;
-    public Text otherInfoText;
-
-    public AudioSource audioSource;
-
     public GameData gameData;
-    private int currentDialogueIndex;
-    private SceneData currentSceneData;
 
     void Awake()
     {
@@ -54,22 +45,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void Start() {
-        
-        //SceneManager.sceneLoaded += OnSceneLoaded;
-
-        // foreach (var item in gameData.scenes) {
-        //     print(item.sceneName + ":");
-        //     foreach (var item2 in item.dialogues) {
-        //         print(item2.background);
-        //         print(item2.character + " : " + item2.text);
-        //         print("dubbing: " + item2.dubbing);
-        //         print("other: " + item2.other);
-        //     }
-        //     print("---");
-        // }
-    }
-
     void LoadDialogueData() {
         string filePath = Path.Combine(Application.streamingAssetsPath, "dialogue.json");
         if (File.Exists(filePath)) {
@@ -81,76 +56,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    // {
-    //     currentSceneData = gameData.scenes.Find(s => s.sceneName == scene.name);
-    //     if (currentSceneData != null) {
-    //         print("這個場景有對話：" + scene.name);
-    //         currentDialogueIndex = 0;
-    //         //ShowDialogue();
-    //     }
-    //     else {
-    //         print("這個場景沒有對話：" + scene.name);
-    //     }
-    // }
+    [SerializeField] AudioSource bgm;
+    [SerializeField] AudioClip bgmClip;
 
-
-    void ShowDialogue()
-    {
-        if (currentSceneData != null && currentDialogueIndex < currentSceneData.dialogues.Count)
-        {
-            Dialogue currentDialogue = currentSceneData.dialogues[currentDialogueIndex];
-
-            // 顯示角色名稱和對話
-            characterNameText.text = currentDialogue.character;
-            dialogueText.text = currentDialogue.text;
-
-            // 顯示其他資訊
-            if (otherInfoText != null) {
-                otherInfoText.text = currentDialogue.other;
-            }
-
-            // 切換背景圖片
-            if (!string.IsNullOrEmpty(currentDialogue.background)) {
-                SetBackground(currentDialogue.background);
-            }
-
-            // 播放配音
-            if (!string.IsNullOrEmpty(currentDialogue.dubbing)) {
-                PlayDubbing(currentDialogue.dubbing);
-            }
-        }
-        else {
-            Debug.Log("場景對話播放完畢！");
-        }
-    }
-
-    public void OnClickNextDialogue()
-    {
-        currentDialogueIndex++;
-        ShowDialogue();
-    }
-
-    void SetBackground(string backgroundName)
-    {
-        Sprite bgSprite = Resources.Load<Sprite>("Backgrounds/" + backgroundName);
-        if (bgSprite != null) {
-            backgroundImage.sprite = bgSprite;
-        }
-        else {
-            Debug.LogError("找不到背景圖片：" + backgroundName);
-        }
-    }
-
-    void PlayDubbing(string dubbingName)
-    {
-        AudioClip clip = Resources.Load<AudioClip>("Audio/" + dubbingName);
-        if (clip != null) {
-            audioSource.clip = clip;
-            audioSource.Play();
-        }
-        else {
-            Debug.LogError("找不到配音檔案：" + dubbingName);
-        }
+    private void Start() {
+        bgm.clip = bgmClip;
+        bgm.loop = true;
+        bgm.Play();
     }
 }

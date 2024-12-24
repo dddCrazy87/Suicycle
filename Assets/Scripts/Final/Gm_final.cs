@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Gm_Lv0 : MonoBehaviour
+public class Gm_final : MonoBehaviour
 {
     [SerializeField] Image backgroundImage;
-    [SerializeField] AudioSource audioSource;
     [SerializeField] Text dialogueText;
     [SerializeField] Image dialogueChImage;
     [SerializeField] GameObject dialogueUI;
@@ -28,7 +27,7 @@ public class Gm_Lv0 : MonoBehaviour
 
         // ---------Set dialogue---------
         if (DialogueManager.Instance != null && DialogueManager.Instance.gameData != null) {
-            var dialogueItems = DialogueManager.Instance.gameData.scenes.Find(s => s.sceneName == "Lv0_start").dialogues;
+            var dialogueItems = DialogueManager.Instance.gameData.scenes.Find(s => s.sceneName == SceneManager.GetActiveScene().name).dialogues;
             foreach (var item in dialogueItems) {
                 dialogues.Add(new Dialogue { character = item.character, text = item.text , background = item.background, dubbing = item.dubbing, other = item.other });
             }
@@ -52,8 +51,6 @@ public class Gm_Lv0 : MonoBehaviour
     void ShowDialogue() {
         SetDialogue(dialogues[curDialogueIndex].character, dialogues[curDialogueIndex].text);
         SetBackground(dialogues[curDialogueIndex].background);
-        string dubbingName = dialogues[curDialogueIndex].dubbing;
-        if (dubbingName != "") PlayDubbing(dubbingName);
     }
 
     void SetDialogue(string characterName, string textContent) {
@@ -80,18 +77,6 @@ public class Gm_Lv0 : MonoBehaviour
         }
         else {
             print("找不到背景圖片：" + backgroundName);
-        }
-    }
-
-    void PlayDubbing(string dubbingName)
-    {
-        AudioClip clip = Resources.Load<AudioClip>("AudioClips/" + dubbingName);
-        if (clip != null) {
-            audioSource.clip = clip;
-            audioSource.Play();
-        }
-        else {
-            Debug.LogError("找不到配音檔案：" + dubbingName);
         }
     }
 

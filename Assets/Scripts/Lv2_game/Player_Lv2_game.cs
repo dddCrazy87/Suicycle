@@ -49,16 +49,19 @@ public class Player_Lv2_game : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Obstacle")) {
-            //print("collision o");
+        if (other.gameObject.CompareTag("EndGameLine")) {
+            gm.ShowDialogue();
         }
     }
 
     GameObject preCrusher; bool isChangePlayerType = false;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioClip;
     private void OnTriggerEnter2D(Collider2D other) {
         if (curCrushLv >= totCrushLv - 1) return;
         if (preCrusher == other.gameObject) return;
         if (other.gameObject.CompareTag("Crusher")) {
+            audioSource.PlayOneShot(audioClip);
             preCrusher = other.gameObject;
             if (TriggerCrusher()) {
                 isChangePlayerType = true;

@@ -33,6 +33,9 @@ public class Lv2_start_gm : MonoBehaviour
             }
             ShowDialogue();
         }
+        else {
+            curDialogueIndex = -1;
+        }
     }
 
     bool isPlayingFadeIn = true;
@@ -58,7 +61,7 @@ public class Lv2_start_gm : MonoBehaviour
             return;
         }
         dialogueUI.SetActive(true);
-        Sprite chSprite = Resources.Load<Sprite>("Backgrounds/" + characterName);
+        Sprite chSprite = Resources.Load<Sprite>("CharacterImgs/" + characterName);
         if (chSprite != null) {
             dialogueChImage.sprite = chSprite;
         }
