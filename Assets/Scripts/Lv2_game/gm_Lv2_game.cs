@@ -11,12 +11,16 @@ public class gm_Lv2_game : MonoBehaviour
     [SerializeField] float fadeDuration = 1f;
     // 生成物件
     [SerializeField] ObjectSpawner objectSpawner;
-    [SerializeField] float startDelay = 1.5f;
-    [SerializeField] float repeatRate = 1f;
+    [SerializeField] float spawnStartDelay = 1.5f;
+    [SerializeField] float spawnRepeatRate = 1f;
     
     void Start() {
         StartCoroutine(FadeIn());
-        InvokeRepeating("SpawnObj", startDelay, repeatRate);
+        InvokeRepeating("SpawnObj", spawnStartDelay, spawnRepeatRate);
+    }
+    
+    public void StopSpawnObj() {
+        CancelInvoke("SpawnObj");
     }
 
     IEnumerator FadeIn()

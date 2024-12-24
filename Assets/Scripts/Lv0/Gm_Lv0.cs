@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class Gm_Lv0 : MonoBehaviour
 {
     [SerializeField] Image backgroundImage;
-    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] Text dialogueText;
     [SerializeField] Image dialogueChImage;
     [SerializeField] GameObject dialogueUI;
     int curDialogueIndex = 0;

@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Lv2_start_gm : MonoBehaviour
 {
     [SerializeField] Lv2_start_player player;
-    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] Text dialogueText;
     [SerializeField] Image dialogueChImage;
     [SerializeField] GameObject dialogueUI;
     int curDialogueIndex = 0;

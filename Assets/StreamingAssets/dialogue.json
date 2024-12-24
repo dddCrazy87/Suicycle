@@ -309,6 +309,17 @@
           "other": ""
         }
       ]
+    },{
+      "sceneName": "Final",
+      "dialogues": [
+        {
+          "character": "",
+          "text": "",
+          "background": "",
+          "dubbing": "",
+          "other": ""
+        }
+      ]
     }
   ]
 }

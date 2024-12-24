@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class MoveUp : MonoBehaviour
 {
-    [SerializeField] float speed = 3f;
+    public float speeda = 6f;
+    bool isBackground = false, isPause = false;
+    private void Start() {
+        if (gameObject.CompareTag("Background")) {
+            isBackground = true;
+        }
+    }
     void Update()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
-        if (transform.position.y > 6.5f) {
+        if (!isPause) {
+            transform.Translate(Vector3.up * speeda * Time.deltaTime);
+        }
+        if (!isBackground && transform.position.y > 6.5f) {
             Destroy(gameObject);
         }
+    }
+
+    public void StopMoveUp() {
+        isPause = true;
     }
 }
