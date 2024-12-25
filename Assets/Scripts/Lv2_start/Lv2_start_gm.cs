@@ -53,6 +53,8 @@ public class Lv2_start_gm : MonoBehaviour
     // ---------Set Dialogue---------
     void ShowDialogue() {
         SetDialogue(dialogues[curDialogueIndex].character, dialogues[curDialogueIndex].text);
+        string dubbingName = dialogues[curDialogueIndex].dubbing;
+        if (dubbingName != "") PlayDubbing(dubbingName);
     }
 
     void SetDialogue(string characterName, string textContent) {
@@ -69,6 +71,19 @@ public class Lv2_start_gm : MonoBehaviour
             print("找不到角色圖片：" + characterName);
         }
         dialogueText.text = textContent;
+    }
+
+    [SerializeField] AudioSource audioSource;
+     void PlayDubbing(string dubbingName)
+    {
+        AudioClip clip = Resources.Load<AudioClip>("AudioClips/" + dubbingName);
+        if (clip != null) {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+        else {
+            Debug.LogError("找不到配音檔案：" + dubbingName);
+        }
     }
 
     void NextDialogue() {

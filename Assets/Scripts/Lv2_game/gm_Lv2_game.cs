@@ -78,6 +78,7 @@ public class gm_Lv2_game : MonoBehaviour
     [SerializeField] Text dialogueText;
     [SerializeField] Image dialogueChImage;
     [SerializeField] GameObject dialogueUI;
+    [SerializeField] AudioSource audioSource;
     int curDialogueIndex = 0;
     class Dialogue {
         public string character;
@@ -102,6 +103,8 @@ public class gm_Lv2_game : MonoBehaviour
         dialogueUI.SetActive(true);
         isPlayingDialogues = true;
         SetDialogue(dialogues[curDialogueIndex].character, dialogues[curDialogueIndex].text);
+        string dubbingName = dialogues[curDialogueIndex].dubbing;
+        if (dubbingName != "") PlayDubbing(dubbingName);
     }
 
     void SetDialogue(string characterName, string textContent) {
@@ -118,6 +121,18 @@ public class gm_Lv2_game : MonoBehaviour
             print("找不到角色圖片：" + characterName);
         }
         dialogueText.text = textContent;
+    }
+
+    void PlayDubbing(string dubbingName)
+    {
+        AudioClip clip = Resources.Load<AudioClip>("AudioClips/" + dubbingName);
+        if (clip != null) {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+        else {
+            Debug.LogError("找不到配音檔案：" + dubbingName);
+        }
     }
     
     [SerializeField] string nextScence = "Final";
